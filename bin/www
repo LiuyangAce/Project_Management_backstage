@@ -7,16 +7,20 @@
 var app = require('../app');
 var debug = require('debug')('demo:server');
 var http = require('http');
+var ip = require('ip')
 var config = require('../config');
 
 /**
  * Get port from environment and store in Express.
+ * 并且获取ip
  */
 
 var port = normalizePort(config.port || '3000');
 // app.set('port', port);
 
+var currentIP = ip.address()
 
+console.log('当前ip地址:', currentIP);
 console.log('当前环境信息:',config);
 
 /**
@@ -27,9 +31,10 @@ var server = http.createServer(app.callback());
 
 /**
  * Listen on provided port, on all network interfaces.
+ * 并且根据环境监听不同ip
  */
 
-server.listen(port);
+server.listen(port,currentIP);
 server.on('error', onError);
 server.on('listening', onListening);
 
