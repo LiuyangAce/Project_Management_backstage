@@ -28,6 +28,10 @@ app.use(bodyparser({
 app.use(json())
 app.use(logger())
 app.use(require('koa-static')(__dirname + '/public'))
+
+/**
+ * 允许所有的跨域请求
+ */
 app.use(cors())
 
 app.use(views(__dirname + '/views', {
