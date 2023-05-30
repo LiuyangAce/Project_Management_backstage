@@ -4,7 +4,6 @@ var config = require('../config');
 
 // 连接数据库
 module.exports = () => {
-  // mongoose.connect('mongodb://localhost:27017/madpecker',{useUnifiedTopology:true ,useNewUrlParser:true})
   mongoose.connect(config.mongodb_url,{useUnifiedTopology:true ,useNewUrlParser:true})
   .then(() => {
     console.log('数据库连接成功');
