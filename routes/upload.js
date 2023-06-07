@@ -41,4 +41,7 @@ router.post('/img', upload.single('myfile'), async ctx => {
   }
 })
 
+// 大文件上传
+router.post('/checkfile', upload)
+
 module.exports = router
