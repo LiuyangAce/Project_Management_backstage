@@ -15,7 +15,7 @@ MongoConnect()
 // 引入路由模块
 const users = require('./routes/users')
 const defect = require('./routes/defect')
-const upload = require('./routes/upload')
+// const upload = require('./routes/upload')
 const interface = require('./routes/interface')
 
 // error handler
@@ -44,7 +44,7 @@ app.use(views(__dirname + '/views', {
 app.use(koajwt({
   secret: 'jianshu-server-jwt'
 }).unless({
-  path: [/^\/users\/login/,/^\/users\/reg/]
+  path: [/^\/users\/a/,/^\/users\/login/,/^\/users\/reg/]
 }))
 
 // logger
@@ -59,7 +59,7 @@ app.use(async (ctx, next) => {
 // app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
 app.use(defect.routes(), defect.allowedMethods())
-app.use(upload.routes(), upload.allowedMethods())
+// app.use(upload.routes(), upload.allowedMethods())
 app.use(interface.routes(), interface.allowedMethods())
 
 // error-handling

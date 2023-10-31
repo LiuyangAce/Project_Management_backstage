@@ -23,6 +23,7 @@ router.post('/findOne', userCtl.userFindOne)
 
 //登录 已验证
 router.post('/login', userCtl.userLogin)
+router.post('/a', userCtl.a)
 
 //注册 已验证
 router.post('/reg', userCtl.userReg)
