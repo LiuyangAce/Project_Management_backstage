@@ -44,7 +44,7 @@ app.use(views(__dirname + '/views', {
 app.use(koajwt({
   secret: 'jianshu-server-jwt'
 }).unless({
-  path: [/^\/users\/a/,/^\/users\/login/,/^\/users\/reg/]
+  path: [/^\/users\/test1/,/^\/users\/login/,/^\/users\/reg/]
 }))
 
 // logger

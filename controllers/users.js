@@ -2,11 +2,20 @@ let { User } = require("../models/users")
 let usersUtil = require("./usersUtil/index")
 const jwt = require('jsonwebtoken')
 
-const a =  async (ctx, next) => {
-  return {
-    name:123,
-    age: 456
-  }
+const test1 =  async (ctx, next) => {
+  // await usersUtil.test1 (ctx)
+  return ctx.response.body = [
+    {
+      x:1,
+      y:2,
+      s:'数据1'
+    },
+    {
+      x:1,
+      y:2,
+      s:'数据2'
+    }
+  ]
 }
 
 // 用户登录
@@ -83,7 +92,7 @@ const userComponent = async (ctx, next) => {
   await usersUtil.findComponent(User,ctx)
 }
 module.exports = {
-  a,
+  test1,
   userAdd,
   userUpdatePersonal,
   userDel,
