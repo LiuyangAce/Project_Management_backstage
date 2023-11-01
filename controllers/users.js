@@ -92,7 +92,7 @@ const userComponent = async (ctx, next) => {
   await usersUtil.findComponent(User,ctx)
 }
 
-const polyline =  async (ctx, next) => {
+const polyline =  (ctx, next) => {
   return ctx.response.body = {
     data:     {
       "dataX": [
