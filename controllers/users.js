@@ -92,8 +92,10 @@ const userComponent = async (ctx, next) => {
   await usersUtil.findComponent(User,ctx)
 }
 
-const polyline =  (ctx, next) => { 
-  return [
+const polyline =  async (ctx, next) => { 
+  console.log(11111);
+  return ctx.response.body = 
+  [
     {
       "dataX": [
           "202105",
@@ -139,52 +141,6 @@ const polyline =  (ctx, next) => {
       ]
     }
   ]
-  // [
-  //   {
-  //     "dataX": [
-  //         "202105",
-  //         "202106",
-  //         "202107",
-  //         "202108",
-  //         "202109",
-  //         "202110",
-  //         "202111",
-  //         "202112",
-  //         "202201"
-  //     ],
-  //     "dataValue": [{
-  //             "title": "上海",
-  //             "value": [
-  //                 392,
-  //                 300,
-  //                 387,
-  //                 201,
-  //                 271,
-  //                 264,
-  //                 351,
-  //                 331,
-  //                 314,
-  //                 211
-  //             ]
-  //         },
-  //         {
-  //             "title": "北京",
-  //             "value": [
-  //                 152,
-  //                 200,
-  //                 187,
-  //                 201,
-  //                 251,
-  //                 364,
-  //                 151,
-  //                 231,
-  //                 214,
-  //                 251
-  //             ]
-  //         }
-  //     ]
-  //   }
-  // ]
 }
 
 const columnar = async (ctx, next) => {
