@@ -39,6 +39,7 @@ router.get('/component', userCtl.userComponent)
 
 // 多折线
 router.post('/test/polyline', userCtl.polyline)
+router.post('/test/polyline1', userCtl.polyline1)
 
 // 柱状图
 router.post('/test/columnar', userCtl.columnar)
