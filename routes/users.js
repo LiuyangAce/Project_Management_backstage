@@ -37,4 +37,13 @@ router.post('/updatePwd', userCtl.userPwdUpdate)
 //查询人员组成
 router.get('/component', userCtl.userComponent)
 
+// 多折线
+router.get('/test/polyline', userCtl.polyline)
+
+// 柱状图
+router.get('/test/columnar', userCtl.columnar)
+
+// 表格
+router.get('/test/tabulation', userCtl.tabulation)
+
 module.exports = router
