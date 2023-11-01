@@ -92,9 +92,9 @@ const userComponent = async (ctx, next) => {
   await usersUtil.findComponent(User,ctx)
 }
 
-const polyline =  (ctx, next) => {
-  return ctx.response.body = {
-    data:     {
+const polyline =  (ctx, next) => { 
+  return [
+    {
       "dataX": [
           "202105",
           "202106",
@@ -138,7 +138,7 @@ const polyline =  (ctx, next) => {
           }
       ]
     }
-  }
+  ]
   // [
   //   {
   //     "dataX": [
