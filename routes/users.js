@@ -38,12 +38,12 @@ router.post('/updatePwd', userCtl.userPwdUpdate)
 router.get('/component', userCtl.userComponent)
 
 // 多折线
-router.get('/test/polyline', userCtl.polyline)
+router.post('/test/polyline', userCtl.polyline)
 
 // 柱状图
-router.get('/test/columnar', userCtl.columnar)
+router.post('/test/columnar', userCtl.columnar)
 
 // 表格
-router.get('/test/tabulation', userCtl.tabulation)
+router.post('/test/tabulation', userCtl.tabulation)
 
 module.exports = router
